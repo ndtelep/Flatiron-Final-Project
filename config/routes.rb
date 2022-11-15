@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :items
+  resources :users, only: [:index, :show, :create]
+  resources :likes, only: [:index, :show, :create, :destroy]
+  resources :comments
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
